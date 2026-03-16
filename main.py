@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 app = FastAPI(
-    title="OnCall API",
+    title="Prompt API",
     description="Simple API demonstrating MCP tool use cases",
     version="1.0.0"
 )
@@ -14,7 +14,7 @@ class Message(BaseModel):
 
 @app.get("/")
 def root():
-    return {"message": "OnCall API Running"}
+    return {"message": "Prompt API Running"}
 
 
 @app.get("/status")
